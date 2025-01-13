@@ -155,7 +155,7 @@ Let's verify that \(g_\varepsilon\) integrates to one for each \(\varepsilon\). 
 = \frac{1}{\sqrt{2\pi}\,\varepsilon}
   \int_{\mathbb{R}} \exp\!\Bigl(-\frac{x^2}{\varepsilon^2}\Bigr)\, dx.
 \]
-By the substitution \(u = x / \varepsilon\), hence \(dx = \varepsilon\,du\), we obtain
+By the substitution \(u = x / sqrt{\pi} \varepsilon\), hence \(dx = \varepsilon\,du\), we obtain
 \[
 \int_{\mathbb{R}} \exp\!\Bigl(-\frac{x^2}{\varepsilon^2}\Bigr)\, dx
 = \varepsilon \int_{\mathbb{R}} e^{-u^2}\, du
@@ -621,13 +621,13 @@ Hence the distributional derivative agrees with the usual one for sufficiently s
 \begin{example}[Derivative of an Integral Functional]
 Define
 \[
-\dist{T}{\varphi} := \int_{-\infty}^{\infty} \varphi(x)\,dx.
+\dist{T}{\varphi} := \int_{0}^{\infty} \varphi(x)\,dx.
 \]
 Then, using the definition of the distributional derivative,
 \[
 \dist{T'}{\varphi}
 = -\dist{T}{\varphi'}
-= -\int_{-\infty}^{\infty} \varphi'(x)\,dx
+= -\int_{0}^{\infty} \varphi'(x)\,dx
 = \varphi(0),
 \]
 by the fundamental theorem of calculus. This equals $\delta_0(\varphi)$, so
